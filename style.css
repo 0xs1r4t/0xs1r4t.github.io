@@ -1,0 +1,157 @@
+@font-face {
+  font-family: 'Pilowlava';
+  src: url('https://cdn.glitch.com/5ccc9909-dc77-475c-9585-84b435e4e5e2%2FPilowlava-Regular.eot?v=1593892752541'); /* IE9 Compat Modes */
+  src: url('https://cdn.glitch.com/5ccc9909-dc77-475c-9585-84b435e4e5e2%2FPilowlava-Regular.woff2?v=1593892752618') format('woff2'); /* Super Modern Browsers */
+  src: url('https://cdn.glitch.com/5ccc9909-dc77-475c-9585-84b435e4e5e2%2FPilowlava-Regular.woff?v=1593892752467') format('woff'); /* Pretty Modern Browsers */
+  src: url('https://cdn.glitch.com/5ccc9909-dc77-475c-9585-84b435e4e5e2%2FPilowlava-Regular.otf?v=1593892754722')  format('opentype'); /* Safari, Android, iOS */
+}
+
+:root {
+  --shadow_x: 10px;
+  --shadow_y: 10px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #2f2f2f;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+::-moz-selection {
+  background-color: hotpink;
+  color: #2f2f2f;
+}
+
+::selection {
+  background-color: hotpink;
+  color: #2f2f2f;
+}
+
+.typo {
+  width: 100%;
+  height: 100%;
+  cursor: default;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  background-image: url("https://images.pexels.com/photos/2779948/pexels-photo-2779948.jpeg?auto=compress&cs=tinysrgb&h=1150&w=1660");
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.typo::after {
+  width: 100%;
+  height: 100%;
+  background-color: #2f2f2f;
+  mix-blend-mode: overlay;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.typo__heading {
+  color: black;
+  font-family: 'Pilowlava', sans-serif;
+  font-size: 35vmin;
+  /* font-weight: bolder; */
+  line-height: 30vmin;
+  margin: 0;
+  mix-blend-mode: lighten;
+  outline: none;
+  position: relative;
+  z-index: 10;
+}
+.typo__heading::after {
+  width: 500vw;
+  height: 500vh;
+  background-color: #2f2f2f;
+  content: '';
+  position: absolute;
+  top: -250vh;
+  left: -250vw;
+  z-index: -1;
+}
+
+.has-shadow {
+  text-shadow: calc(var(--shadow_x) * -1) calc(var(--shadow_y) * 1) 0 #bdadba, calc(var(--shadow_x) * -2) calc(var(--shadow_y) * 2) 0 #c19fbb, calc(var(--shadow_x) * -3) calc(var(--shadow_y) * 3) 0 #c591bc, calc(var(--shadow_x) * -4) calc(var(--shadow_y) * 4) 0 #ca81be, calc(var(--shadow_x) * -5) calc(var(--shadow_y) * 5) 0 #d171c1, calc(var(--shadow_x) * -6) calc(var(--shadow_y) * 6) 0 #d85fc4, calc(var(--shadow_x) * -7) calc(var(--shadow_y) * 7) 0 #e14cc8, calc(var(--shadow_x) * -8) calc(var(--shadow_y) * 8) 0 #ea39cd;
+}
+
+.has-anim {
+  -webkit-animation: anim_text 0.8s 0.4s cubic-bezier(0.17, 0.67, 0.66, 1.03) infinite alternate;
+          animation: anim_text 0.8s 0.4s cubic-bezier(0.17, 0.67, 0.66, 1.03) infinite alternate;
+}
+@-webkit-keyframes anim_text {
+  100% {
+    -webkit-transform: translate(80px, -80px);
+            transform: translate(80px, -80px);
+    text-shadow: calc(var(--shadow_x) * -1) calc(var(--shadow_y) * 1) 0 #bdadba, calc(var(--shadow_x) * -2) calc(var(--shadow_y) * 2) 0 #c19fbb, calc(var(--shadow_x) * -3) calc(var(--shadow_y) * 3) 0 #c591bc, calc(var(--shadow_x) * -4) calc(var(--shadow_y) * 4) 0 #ca81be, calc(var(--shadow_x) * -5) calc(var(--shadow_y) * 5) 0 #d171c1, calc(var(--shadow_x) * -6) calc(var(--shadow_y) * 6) 0 #d85fc4, calc(var(--shadow_x) * -7) calc(var(--shadow_y) * 7) 0 #e14cc8, calc(var(--shadow_x) * -8) calc(var(--shadow_y) * 8) 0 #ea39cd;
+  }
+}
+@keyframes anim_text {
+  100% {
+    -webkit-transform: translate(80px, -80px);
+            transform: translate(80px, -80px);
+    text-shadow: calc(var(--shadow_x) * -1) calc(var(--shadow_y) * 1) 0 #bdadba, calc(var(--shadow_x) * -2) calc(var(--shadow_y) * 2) 0 #c19fbb, calc(var(--shadow_x) * -3) calc(var(--shadow_y) * 3) 0 #c591bc, calc(var(--shadow_x) * -4) calc(var(--shadow_y) * 4) 0 #ca81be, calc(var(--shadow_x) * -5) calc(var(--shadow_y) * 5) 0 #d171c1, calc(var(--shadow_x) * -6) calc(var(--shadow_y) * 6) 0 #d85fc4, calc(var(--shadow_x) * -7) calc(var(--shadow_y) * 7) 0 #e14cc8, calc(var(--shadow_x) * -8) calc(var(--shadow_y) * 8) 0 #ea39cd;
+  }
+}
+
+.is-overlay::after {
+  mix-blend-mode: overlay;
+}
+
+.is-color::after {
+  mix-blend-mode: color;
+}
+
+.is-exclusion::after {
+  mix-blend-mode: exclusion;
+}
+
+.is-hard-light::after {
+  mix-blend-mode: hard-light;
+}
+
+.is-color-burn::after {
+  mix-blend-mode: color-burn;
+}
+
+.is-darken::after {
+  mix-blend-mode: darken;
+}
+
+.is-difference::after {
+  mix-blend-mode: difference;
+}
+
+.is-saturation::after {
+  mix-blend-mode: saturation;
+}
+
+.is-color-dodge::after {
+  mix-blend-mode: color-dodge;
+}
+
+.is-multiply::after {
+  mix-blend-mode: multiply;
+}
+
+.is-normal::after {
+  mix-blend-mode: normal;
+}
+
+.is-hue::after {
+  mix-blend-mode: hue;
+}
+
+.is-screen::after {
+  mix-blend-mode: screen;
+}
