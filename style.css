@@ -19,9 +19,11 @@ body {
 }
 
 body {
-  background-color: #2f2f2f;
+  background-color: whitesmoke;
   margin: 0;
   padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  text-rendering: optimizeSpeed;
 }
 
 progress {
@@ -48,20 +50,25 @@ progress::-moz-progress-bar {
   background-attachment: fixed;
 }
 
-
 ::-moz-selection {
   background-color: hotpink;
-  color: #2f2f2f;
+  color: whitesmoke
 }
 
 ::selection {
   background-color: hotpink;
-  color: #2f2f2f;
+  color: whitesmoke;
+}
+
+header {
+  width: 100%;
+  height: 75%;
+  background-color: whitesmoke;
 }
 
 .typo {
   width: 100%;
-  height: 100%;
+  height: 75%;
   cursor: default;
   display: -webkit-box;
   display: flex;
@@ -69,47 +76,22 @@ progress::-moz-progress-bar {
           align-items: center;
   -webkit-box-pack: center;
           justify-content: center;
-  background: black;
   position: fixed;
   top: 0;
   left: 0;
 }
 
-/*
-.typo::after {
-  width: 100%;
-  height: 100%;
-  background-color: #2f2f2f;
-  mix-blend-mode: overlay;
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-*/
-
 .typo__heading {
   color: black;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  text-rendering: optimizeSpeed;
-  font-size: 35vmin;
   font-weight: bolder;
-  line-height: 30vmin;
+  font-size: 30vmin;
+  line-height: 15vmin;
   margin: 0;
-  mix-blend-mode: lighten;
+  mix-blend-mode: overlay;
   outline: none;
   position: relative;
   z-index: 10;
-}
-.typo__heading::after {
-  width: 500vw;
-  height: 500vh;
-  background-color: whitesmoke;
-  content: '';
-  position: absolute;
-  top: -250vh;
-  left: -250vw;
-  z-index: -1;
+  text-align: center;
 }
 
 .has-shadow {
@@ -138,10 +120,10 @@ progress::-moz-progress-bar {
 section {
   margin: 0;
   font-size: 24px;
-  font-size: #{'max(18px, min(90px, 10vw))'};
   font-weight: 300;
   text-align: center;
   line-height: 1.2;
   padding: 1em;
   z-index: 50;
+  /* font-size: #{'max(18px, min(90px, 10vw))'}; */
 }
