@@ -62,13 +62,13 @@ progress::-moz-progress-bar {
 
 header {
   width: 100%;
-  height: 75%;
+  height: 75vh;
   background-color: whitesmoke;
 }
 
 .typo {
   width: 100%;
-  height: 75%;
+  height: 75vh;
   cursor: default;
   display: -webkit-box;
   display: flex;
@@ -76,7 +76,7 @@ header {
           align-items: center;
   -webkit-box-pack: center;
           justify-content: center;
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
 }
@@ -87,11 +87,12 @@ header {
   font-size: 30vmin;
   line-height: 15vmin;
   margin: 0;
-  mix-blend-mode: overlay;
+  /* mix-blend-mode: overlay; */
   outline: none;
   position: relative;
   z-index: 10;
   text-align: center;
+  background-color: transparent;
 }
 
 .has-shadow {
