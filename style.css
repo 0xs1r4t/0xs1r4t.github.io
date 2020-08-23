@@ -44,14 +44,14 @@ progress::-webkit-progress-bar {
 progress::-webkit-progress-value {
   background-image: linear-gradient(to right, pink, yellow, cyan, violet);
   background-attachment: fixed;
-  animation: RainbowAnim .5s linear infinite;
   -webkit-animation: RainbowAnim .5s linear infinite;
+  animation: RainbowAnim .5s linear infinite;
 }
 progress::-moz-progress-bar {
   background-image: linear-gradient(to right, pink, yellow, cyan, violet);
   background-attachment: fixed;
-  animation: RainbowAnim .5s linear infinite;
   -webkit-animation: RainbowAnim .5s linear infinite;
+  animation: RainbowAnim .5s linear infinite;
 }
 
 @keyframes RainbowAnim {
@@ -77,73 +77,4 @@ progress::-moz-progress-bar {
 ::selection {
   background-color: hotpink;
   color: whitesmoke;
-}
-
-header {
-  width: 100%;
-  height: 100vh;
-  background-color: whitesmoke;
-}
-
-.typo {
-  width: 100%;
-  height: 100vh;
-  cursor: default;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
-  /* position: fixed; */
-  top: 0;
-  left: 0;
-}
-
-.typo__heading {
-  color: black;
-  font-weight: bolder;
-  font-size: 30vmin;
-  line-height: 15vmin;
-  margin: 0;
-  /* mix-blend-mode: overlay; */
-  outline: none;
-  position: relative;
-  z-index: 10;
-  text-align: center;
-  background-color: transparent;
-}
-
-.has-shadow {
-  text-shadow: calc(var(--shadow_x) * -1) calc(var(--shadow_y) * 1) 0 #bdadba, calc(var(--shadow_x) * -2) calc(var(--shadow_y) * 2) 0 #c19fbb, calc(var(--shadow_x) * -3) calc(var(--shadow_y) * 3) 0 #c591bc, calc(var(--shadow_x) * -4) calc(var(--shadow_y) * 4) 0 #ca81be, calc(var(--shadow_x) * -5) calc(var(--shadow_y) * 5) 0 #d171c1, calc(var(--shadow_x) * -6) calc(var(--shadow_y) * 6) 0 #d85fc4, calc(var(--shadow_x) * -7) calc(var(--shadow_y) * 7) 0 #e14cc8, calc(var(--shadow_x) * -8) calc(var(--shadow_y) * 8) 0 #ea39cd;
-}
-
-.has-anim {
-  -webkit-animation: anim_text 0.8s 0.4s cubic-bezier(0.17, 0.67, 0.66, 1.03) infinite alternate;
-          animation: anim_text 0.8s 0.4s cubic-bezier(0.17, 0.67, 0.66, 1.03) infinite alternate;
-}
-@-webkit-keyframes anim_text {
-  100% {
-    -webkit-transform: translate(80px, -80px);
-            transform: translate(80px, -80px);
-    text-shadow: calc(var(--shadow_x) * -1) calc(var(--shadow_y) * 1) 0 #bdadba, calc(var(--shadow_x) * -2) calc(var(--shadow_y) * 2) 0 #c19fbb, calc(var(--shadow_x) * -3) calc(var(--shadow_y) * 3) 0 #c591bc, calc(var(--shadow_x) * -4) calc(var(--shadow_y) * 4) 0 #ca81be, calc(var(--shadow_x) * -5) calc(var(--shadow_y) * 5) 0 #d171c1, calc(var(--shadow_x) * -6) calc(var(--shadow_y) * 6) 0 #d85fc4, calc(var(--shadow_x) * -7) calc(var(--shadow_y) * 7) 0 #e14cc8, calc(var(--shadow_x) * -8) calc(var(--shadow_y) * 8) 0 #ea39cd;
-  }
-}
-@keyframes anim_text {
-  100% {
-    -webkit-transform: translate(80px, -80px);
-            transform: translate(80px, -80px);
-    text-shadow: calc(var(--shadow_x) * -1) calc(var(--shadow_y) * 1) 0 #bdadba, calc(var(--shadow_x) * -2) calc(var(--shadow_y) * 2) 0 #c19fbb, calc(var(--shadow_x) * -3) calc(var(--shadow_y) * 3) 0 #c591bc, calc(var(--shadow_x) * -4) calc(var(--shadow_y) * 4) 0 #ca81be, calc(var(--shadow_x) * -5) calc(var(--shadow_y) * 5) 0 #d171c1, calc(var(--shadow_x) * -6) calc(var(--shadow_y) * 6) 0 #d85fc4, calc(var(--shadow_x) * -7) calc(var(--shadow_y) * 7) 0 #e14cc8, calc(var(--shadow_x) * -8) calc(var(--shadow_y) * 8) 0 #ea39cd;
-  }
-}
-
-section {
-  margin: 0;
-  font-size: 24px;
-  font-weight: 300;
-  text-align: center;
-  line-height: 1.2;
-  padding: 1em;
-  z-index: 50;
-  /* font-size: #{'max(18px, min(90px, 10vw))'}; */
 }
