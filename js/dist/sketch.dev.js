@@ -4,16 +4,16 @@ var skyBlue = '#CA638B';
 var darkBlue = '#2A1E46';
 var eyeWhite, eyeBall, eyeShine, ballAngle, shineAngle;
 var easing = 0.25;
-var myMeasure = 200;
+var myMeasure = 48;
 
 function setup() {
-  createCanvas(myMeasure * 1.3, myMeasure * 1.3); // windowWidth, windowHeight
+  createCanvas(myMeasure * 1.5, myMeasure * 1.5); // windowWidth, windowHeight
   // eyes
 
   eyeWhite = {
     x: width / 2,
     y: height / 2,
-    w: myMeasure,
+    w: myMeasure + myMeasure * 1 / 10,
     h: myMeasure
   };
   eyeBall = {
@@ -23,8 +23,8 @@ function setup() {
     h: myMeasure * 0.6
   };
   eyeShine = {
-    x: width / 2 - 35,
-    y: height / 2 - 35,
+    x: width / 2 - myMeasure * 7 / 40,
+    y: height / 2 - myMeasure * 7 / 40,
     w: myMeasure * 0.25,
     h: myMeasure * 0.1
   }; // font
@@ -48,7 +48,8 @@ function mouseMoved() {
   fill(255);
   noStroke();
   smooth();
-  ellipse(eyeWhite.x, eyeWhite.y, eyeWhite.w, eyeWhite.h); // angle
+  ellipse(eyeWhite.x, eyeWhite.y, eyeWhite.w, eyeWhite.h);
+  smooth(); // angle
 
   angle = atan2(mouseY - eyeBall.y, mouseX - eyeBall.x); // eye ball
 
