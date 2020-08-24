@@ -4,16 +4,17 @@ var skyBlue = '#CA638B';
 var darkBlue = '#2A1E46';
 var eyeWhite, eyeBall, eyeShine, ballAngle, shineAngle;
 var easing = 0.25;
-var myMeasure = 48;
+var myMeasure = 125;
 
 function setup() {
-  createCanvas(myMeasure * 1.5, myMeasure * 1.5); // windowWidth, windowHeight
-  // eyes
+  var myCanvas = createCanvas(myMeasure, myMeasure);
+  myCanvas.parent('myCanvas');
+  myCanvas.position(windowWidth - 150, windowHeight - 150); // eyes
 
   eyeWhite = {
     x: width / 2,
     y: height / 2,
-    w: myMeasure + myMeasure * 1 / 10,
+    w: myMeasure,
     h: myMeasure
   };
   eyeBall = {
@@ -37,7 +38,7 @@ function setup() {
 
 function draw() {
   // background
-  background(skyBlue);
+  // background(skyBlue);
   smooth(); // fill(darkBlue)
   // text('eye can see', width/2, 30)
   // smooth()

@@ -2,16 +2,18 @@ let skyBlue = '#CA638B'
 let darkBlue = '#2A1E46'
 var eyeWhite, eyeBall, eyeShine, ballAngle, shineAngle
 let easing = 0.25
-let myMeasure = 48
+let myMeasure = 125
 
 function setup() {
-  createCanvas(myMeasure * 1.5, myMeasure * 1.5) // windowWidth, windowHeight
+  const myCanvas = createCanvas(myMeasure, myMeasure)
+  myCanvas.parent('myCanvas')
+  myCanvas.position(windowWidth - 150, windowHeight - 150)
 
   // eyes
   eyeWhite = {
     x: width / 2,
     y: height / 2,
-    w: myMeasure +  (myMeasure * 1/10),
+    w: myMeasure,
     h: myMeasure
   }
   
@@ -39,7 +41,7 @@ function setup() {
 
 function draw() {
   // background
-  background(skyBlue);
+  // background(skyBlue);
   smooth()
 
   // fill(darkBlue)
