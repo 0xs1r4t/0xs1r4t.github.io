@@ -16,26 +16,26 @@ function setup() {
     w: myMeasure,
     h: myMeasure
   }
-  
+
   eyeBall = {
     x: width / 2,
     y: height / 2,
     w: myMeasure * 0.3,
     h: myMeasure * 0.6
   }
-  
+
   eyeShine = {
     x: (width / 2) - (myMeasure * 7/40),
     y: (height / 2) - (myMeasure * 7/40),
     w: myMeasure * 0.25,
     h: myMeasure * 0.1
   }
-  
+
   // font
   textFont('Space Mono');
   textSize(30)
   textAlign(CENTER, CENTER)
-  
+
   noLoop()
 }
 

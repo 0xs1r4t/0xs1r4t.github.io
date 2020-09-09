@@ -23,12 +23,25 @@
   --soft-pink: #FEC2FF;
   --soft-purple: #CEB3FE;
   --bright-blue: #396FFD;
-  --bright-pink: #FF69B4;
+  --soft-green: #BEFEB3;
 }
 
 html,
 body {
   height: 100%;
+}
+
+html {
+  scrollbar-width: none;
+  /* For Firefox */
+  -ms-overflow-style: none;
+  /* For Internet Explorer and Edge */
+}
+
+html::-webkit-scrollbar {
+  width: 0px;
+  /* For Chrome, Safari, and Opera */
+  display: none;
 }
 
 body {
@@ -113,23 +126,23 @@ progress::-moz-progress-bar {
 }
 
 header {
-  background: var(--soft-purple);
+  background: var(--soft-green);
   border-bottom: 3px solid var(--bright-blue);
   padding: 1em 0.5em 0 0.5em;
   margin: 0;
 }
 
-h1 {
-  font-family: 'Sporting Grotesque Bold', 'Sporting Grotesque Regular', 'Sporting Grotesque', 'AUTHENTIC Sans', Arial, Helvetica, sans-serif;
+h1,
+h2 {
+  font-family: 'Sporting Grotesque Bold', 'AUTHENTIC Sans', Arial, Helvetica, sans-serif;
   text-align: center;
   letter-spacing: 3px;
-  font-weight: 1200;
   margin: 0;
 }
 
 main {
-  overflow-y: scroll;
-  overflow-x: hidden;
+  display: grid;
+  place-items: center;
 }
 
 p {
@@ -150,21 +163,4 @@ footer {
 ::selection {
   background-color: var(--bright-blue);
   color: var(--soft-pink);
-}
-
-/* scrollbar */
-main::-webkit-scrollbar {
-  width: 0.75rem;
-}
-
-main::-webkit-scrollbar-track {
-  background-color: var(--soft-pink);
-  border-left: 2px solid var(--bright-blue);
-  border-right: 2px solid var(--bright-blue);
-  border-bottom: 2px solid var(--bright-blue)
-}
-
-main::-webkit-scrollbar-thumb {
-  background-color: var(--bright-blue);
-  /*border: 2px solid var(--bright-blue);*/
 }

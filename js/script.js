@@ -1,7 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.to('progress', {
   value: 100,
-  ease: 'none',
+  ease: 'power1.inOut',
   scrollTrigger: { scrub: 1 }
 });
-console.log(ScrollTrigger, 'scrolling!');
