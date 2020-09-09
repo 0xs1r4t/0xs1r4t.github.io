@@ -1,0 +1,170 @@
+@font-face {
+  font-family: 'AUTHENTIC Sans';
+  src: url("https://cdn.glitch.com/4e08fdce-4f09-4168-8b21-d44271860232%2FAUTHENTICSans-90.woff2?v=1595102445095") format("woff2"),
+    url("https://cdn.glitch.com/4e08fdce-4f09-4168-8b21-d44271860232%2FAUTHENTICSans-90.woff?v=1595102445203") format("woff"),
+    url("https://cdn.glitch.com/4e08fdce-4f09-4168-8b21-d44271860232%2FAUTHENTICSans-90.otf?v=1595102498458") format("otf");
+}
+
+@font-face {
+  font-family: 'Sporting Grotesque Regular';
+  src: url('https://cdn.glitch.com/4e08fdce-4f09-4168-8b21-d44271860232%2FSportingGrotesque-Regular.otf?v=1599669222539') format("otf"),
+    url('https://cdn.glitch.com/4e08fdce-4f09-4168-8b21-d44271860232%2FSportingGrotesque-Regular.woff?v=1599671067024') format('woff'),
+    url('https://cdn.glitch.com/4e08fdce-4f09-4168-8b21-d44271860232%2FSportingGrotesque-Regular.woff2?v=1599671069801') format('woff2');
+}
+
+@font-face {
+  font-family: 'Sporting Grotesque Bold';
+  src: url('https://cdn.glitch.com/4e08fdce-4f09-4168-8b21-d44271860232%2FSportingGrotesque-Bold.otf?v=1599669221861') format("otf"),
+    url('https://cdn.glitch.com/4e08fdce-4f09-4168-8b21-d44271860232%2FSportingGrotesque-Bold.woff?v=1599671065908') format('woff'),
+    url('https://cdn.glitch.com/4e08fdce-4f09-4168-8b21-d44271860232%2FSportingGrotesque-Bold.woff2?v=1599671066327') format('woff2');
+}
+
+:root {
+  --soft-pink: #FEC2FF;
+  --soft-purple: #CEB3FE;
+  --bright-blue: #396FFD;
+  --bright-pink: #FF69B4;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--soft-pink);
+  color: var(--bright-blue);
+  margin: 0;
+  padding: 0;
+  font-family: 'AUTHENTIC Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  text-rendering: optimizeSpeed;
+}
+
+/* progress bar */
+
+#navigation-progress {
+  display: block;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: var(--bright-blue);
+  z-index: 10;
+  height: 1vh;
+}
+
+progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 1vh;
+  border: none;
+  background: transparent;
+  z-index: 100;
+}
+
+progress::-webkit-progress-bar {
+  background: transparent;
+}
+
+progress::-webkit-progress-value {
+  background-image: linear-gradient(to right, pink, yellow, cyan, violet);
+  background-attachment: fixed;
+  -webkit-animation: RainbowAnim .5s linear infinite;
+  animation: RainbowAnim .5s linear infinite;
+}
+
+progress::-moz-progress-bar {
+  background-image: linear-gradient(to right, pink, yellow, cyan, violet);
+  background-attachment: fixed;
+  -webkit-animation: RainbowAnim .5s linear infinite;
+  animation: RainbowAnim .5s linear infinite;
+}
+
+@keyframes RainbowAnim {
+
+  0%,
+  100% {
+    background-image: linear-gradient(to right, pink, yellow, cyan, violet);
+  }
+
+  25% {
+    background-image: linear-gradient(to right, violet, pink, yellow, cyan);
+  }
+
+  50% {
+    background-image: linear-gradient(to right, cyan, violet, pink, yellow);
+  }
+
+  75% {
+    background-image: linear-gradient(to right, yellow, cyan, violet, pink);
+  }
+}
+
+/* layout */
+/* top | right | bottom | left */
+
+.parent {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
+header {
+  background: var(--soft-purple);
+  border-bottom: 3px solid var(--bright-blue);
+  padding: 1em 0.5em 0 0.5em;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Sporting Grotesque Bold', 'Sporting Grotesque Regular', 'Sporting Grotesque', 'AUTHENTIC Sans', Arial, Helvetica, sans-serif;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 1200;
+  margin: 0;
+}
+
+main {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+p {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  background: transparent;
+}
+
+/* text selection */
+::-moz-selection {
+  background-color: var(--bright-blue);
+  color: var(--soft-pink);
+}
+
+::selection {
+  background-color: var(--bright-blue);
+  color: var(--soft-pink);
+}
+
+/* scrollbar */
+main::-webkit-scrollbar {
+  width: 0.75rem;
+}
+
+main::-webkit-scrollbar-track {
+  background-color: var(--soft-pink);
+  border-left: 2px solid var(--bright-blue);
+  border-right: 2px solid var(--bright-blue);
+  border-bottom: 2px solid var(--bright-blue)
+}
+
+main::-webkit-scrollbar-thumb {
+  background-color: var(--bright-blue);
+  /*border: 2px solid var(--bright-blue);*/
+}
