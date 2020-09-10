@@ -29,6 +29,7 @@
 html,
 body {
   height: 100%;
+  width: 100vw;
 }
 
 html {
@@ -96,6 +97,7 @@ progress::-moz-progress-bar {
   animation: RainbowAnim .5s linear infinite;
 }
 
+/*
 @keyframes RainbowAnim {
 
   0%,
@@ -115,6 +117,7 @@ progress::-moz-progress-bar {
     background-image: linear-gradient(to right, yellow, cyan, violet, pink);
   }
 }
+*/
 
 /* layout */
 /* top | right | bottom | left */
@@ -129,7 +132,7 @@ header {
   position: fixed;
   width: 100%;
   background: var(--soft-green);
-  border-bottom: 3px solid var(--bright-blue);
+  border-bottom: 2px solid var(--bright-blue);
   padding: 1em 0.5em 0 0.5em;
   margin: 0;
 }
@@ -145,6 +148,7 @@ h2 {
 main {
   display: grid;
   place-items: center;
+  min-height: 90vh;
 }
 
 p {
@@ -155,7 +159,35 @@ p {
 footer {
   text-align: center;
   background: transparent;
+  border-top: 2px solid var(--bright-blue);
+  background: var(--soft-purple);
+  width: 100%;
 }
+
+.rolling-text {
+  font-size: 1em;
+  line-height: 3.5em;
+  width: 100vw;
+  display: inline-block;
+  will-change: transform;
+  transform: translateX(0);
+  white-space: nowrap;
+  -webkit-animation: rollingTextLoop 30s linear 1s infinite;
+  animation: rollingTextLoop 30s linear 1s infinite;
+}
+
+@-webkit-keyframes rollingTextLoop {
+  100% {
+    -webkit-transform: translateX(-100%);
+  }
+}
+
+@keyframes rollingTextLoop {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 
 /* text selection */
 ::-moz-selection {
