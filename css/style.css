@@ -126,6 +126,8 @@ progress::-moz-progress-bar {
 }
 
 header {
+  position: fixed;
+  width: 100%;
   background: var(--soft-green);
   border-bottom: 3px solid var(--bright-blue);
   padding: 1em 0.5em 0 0.5em;
@@ -146,6 +148,7 @@ main {
 }
 
 p {
+  font-family: inherit;
   text-align: center;
 }
 
