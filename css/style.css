@@ -126,6 +126,7 @@ progress::-moz-progress-bar {
   display: grid;
   height: 100vh;
   grid-template-rows: auto 1fr auto;
+  place-items: center;
 }
 
 header {
@@ -161,7 +162,8 @@ footer {
   background: transparent;
   border-top: 2px solid var(--bright-blue);
   background: var(--soft-purple);
-  width: 100%;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .rolling-text {
@@ -191,11 +193,13 @@ footer {
 
 /* text selection */
 ::-moz-selection {
-  background-color: var(--bright-blue);
+  margin: 0.5em;
+  background-color: var(--soft-purple);
   color: var(--soft-pink);
 }
 
 ::selection {
-  background-color: var(--bright-blue);
+  margin: 0 0.5em;
+  background-color: var(--soft-purple);
   color: var(--soft-pink);
 }
