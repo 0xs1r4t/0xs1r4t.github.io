@@ -141,9 +141,11 @@ footer {
   background: var(--soft-purple);
   width: 100vw;
   overflow-x: hidden;
+  bottom: 0;
 }
 
 .rolling-text {
+  bottom: inherit;
   font-size: 1em;
   line-height: 3.5em;
   width: 100vw;
