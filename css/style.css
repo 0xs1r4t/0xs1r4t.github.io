@@ -93,31 +93,7 @@ progress::-webkit-progress-value {
 progress::-moz-progress-bar {
   background-image: linear-gradient(to right, pink, yellow, cyan, violet);
   background-attachment: fixed;
-  -webkit-animation: RainbowAnim .5s linear infinite;
-  animation: RainbowAnim .5s linear infinite;
 }
-
-/*
-@keyframes RainbowAnim {
-
-  0%,
-  100% {
-    background-image: linear-gradient(to right, pink, yellow, cyan, violet);
-  }
-
-  25% {
-    background-image: linear-gradient(to right, violet, pink, yellow, cyan);
-  }
-
-  50% {
-    background-image: linear-gradient(to right, cyan, violet, pink, yellow);
-  }
-
-  75% {
-    background-image: linear-gradient(to right, yellow, cyan, violet, pink);
-  }
-}
-*/
 
 /* layout */
 /* top | right | bottom | left */
@@ -132,6 +108,7 @@ progress::-moz-progress-bar {
 header {
   position: fixed;
   width: 100%;
+  top: 0;
   background: var(--soft-green);
   border-bottom: 2px solid var(--bright-blue);
   padding: 1em 0.5em 0 0.5em;
