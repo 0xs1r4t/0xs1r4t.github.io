@@ -144,6 +144,18 @@ footer {
   bottom: 0;
 }
 
+a {
+  text-decoration: none;
+  color: var(--bright-blue);
+}
+
+a:hover {
+  color: rgb(255, 52, 211);
+  background-color: var(--soft-green);
+  padding: 0.5em;
+  text-decoration-line: underline;
+}
+
 .rolling-text {
   bottom: inherit;
   font-size: 1em;
