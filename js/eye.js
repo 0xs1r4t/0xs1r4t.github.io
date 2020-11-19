@@ -59,7 +59,7 @@ function mouseMoved() {
 
   // angle
   angle = atan2(mouseY - eyeBall.y, mouseX - eyeBall.x)
-  
+
   // eye ball
   fill(darkBlue)
   noStroke()
@@ -67,7 +67,7 @@ function mouseMoved() {
   // ellipse(eyeBall.x, eyeBall.y, eyeBall.w, eyeBall.h)
   ellipse((eyeBall.x + (eyeBall.w / 1.5) * cos(angle) * easing), 
           (eyeBall.y + (eyeBall.y / 4) * sin(angle) * easing), 
-          eyeBall.w, 
+          eyeBall.w,
           eyeBall.h)
 
   // eye shine
@@ -76,6 +76,6 @@ function mouseMoved() {
   noStroke()
   ellipse((eyeShine.x + (eyeShine.w / 1.5) * cos(angle) * easing), 
           (eyeShine.y + (eyeShine.y / 4) * sin(angle) * easing), 
-          eyeShine.w, 
+          eyeShine.w,
           eyeShine.h)
 }
