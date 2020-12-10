@@ -1,11 +1,15 @@
 import React from 'react';
+import Twemoji from 'react-twemoji';
+
+import GlobalStyle from './components/GlobalStyle'
 
 function App() {
   return (
     <div>
-      <h1>my website is coming soon!</h1>
+      <GlobalStyle />
+      <Twemoji options={{ className: 'twemoji'}}>
+        <p>🤠</p>
+      </Twemoji>
     </div>
   );
 }
-
-export default App;
