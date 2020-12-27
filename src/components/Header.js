@@ -9,7 +9,7 @@ const HeaderStyle = styled.h1`
 
 export default function Header() {
     return(
-        <div>
+        <div className='mid'>
             <HeaderStyle>
                 Sirat Baweja
                 <br />

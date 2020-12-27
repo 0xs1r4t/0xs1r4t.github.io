@@ -68,6 +68,16 @@ const GlobalStyle = createGlobalStyle`
         margin: 4em;
     }
 
+    a {
+      font-weight: bold;
+      color: var(--soft-green);
+    text-decoration: none;
+  }
+
+  a:hover {
+      color: var(--soft-pink);
+  }
+
 
   ::-moz-selection {
     background-color: var(--bright-blue);
