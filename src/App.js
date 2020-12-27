@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import GlobalStyle from './components/GlobalStyle'
 import Header from './components/Header'
@@ -13,7 +13,7 @@ function App() {
       <Description />
       <Links />
     </div>
-  );
+  )
 }
 
 export default App
