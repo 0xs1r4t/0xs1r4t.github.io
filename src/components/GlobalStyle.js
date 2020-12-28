@@ -71,7 +71,8 @@ const GlobalStyle = createGlobalStyle`
 	      align-content: center;
 	      justify-items: center;
         justify-content: center;
-        margin: 2em;
+        margin: 0;
+        padding: 0;
     }
 
     .links {

@@ -10,7 +10,9 @@ function App() {
     <div>
       <GlobalStyle />
       <Header />
+      <br />
       <Description />
+      <br />
       <Links />
     </div>
   )
