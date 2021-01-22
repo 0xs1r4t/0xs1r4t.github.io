@@ -4,7 +4,7 @@ import React from 'react'
 import GlobalStyle from './components/GlobalStyle'
 
 // assets
-import darkThemeGif from './assets/dark-theme.gif';
+import darkThemeGif from './assets/new-website/dark-theme.gif';
 
 function App() {
   return (
