@@ -6,6 +6,7 @@ html {
   justify-content: center;
   max-width: 100vw;
   max-height: 100vh;
+  overflow-x: hidden;
 }
 
 body {
@@ -14,9 +15,4 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }

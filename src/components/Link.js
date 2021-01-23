@@ -5,7 +5,7 @@ const StyledA = styled.a`
     text-decoration: none;
     border-bottom: 2px solid var(--purple);
 
-  & :hover {
+  :hover {
     background: rgba(111, 56, 255, 0.5);
     border-bottom: 0px;
   }

@@ -40,11 +40,13 @@ const GlobalStyle = createGlobalStyle`
     ::selection {
       background-color: var(--pink);
       color: var(--white);
+      border-bottom: 2px solid var(--white);
     }
 
     ::-moz-selection {
       background-color: var(--pink);
       color: var(--white);
+      border-bottom: 2px solid var(--white);
     }
 
     @media screen and (max-width: 600px) {
