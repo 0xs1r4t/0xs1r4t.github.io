@@ -34,17 +34,7 @@ const GlobalStyle = createGlobalStyle`
       font-weight: 600;
       font-size: 1.5em;
       letter-spacing: 0.05em;
-    }
-
-    .highlight {
-      color: var(--pink);
-      text-decoration: none;
-      border-bottom: 2px solid var(--purple);
-    }
-
-    .highlight:hover {
-      background: rgba(111, 56, 255, 0.5);
-      border-bottom: 0px;
+      max-width: 550px;
     }
 
     ::selection {
@@ -60,7 +50,11 @@ const GlobalStyle = createGlobalStyle`
     @media screen and (max-width: 600px) {
         img {
           width: 95vw;
-      }
+        }
+
+        h1 {
+          font-width: 85vw;
+        }
     }
 `
 
