@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
     * {
@@ -23,8 +23,8 @@ const GlobalStyle = createGlobalStyle`
 
   	    text-align: center;
   	    font-family: monospace;
-  	    background: var(--black);
-  	    color: var(--white);
+  	    background: ${props => props.theme.colors.background};
+  	    color: ${props => props.theme.colors.textColor};
 	      max-width: 100vw;
     }
 
@@ -58,6 +58,6 @@ const GlobalStyle = createGlobalStyle`
           font-width: 85vw;
         }
     }
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;
