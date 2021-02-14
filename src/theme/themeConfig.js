@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 // fonts
-import avaraTtf from "../assets/fonts/avara.ttf";
 import avaraWoff from "../assets/fonts/avara.woff";
 import avaraWoff2 from "../assets/fonts/avara.woff2";
 
@@ -23,8 +22,7 @@ const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: "Avara";
     src: url(${avaraWoff2}) format("woff2"),
-        url(${avaraWoff}) format("woff"),
-        url(${avaraTtf}) format("ttf");
+        url(${avaraWoff}) format("woff");
     font-weight: normal;
     display: swap;
   }
