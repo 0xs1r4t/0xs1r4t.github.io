@@ -11,7 +11,7 @@ const StyledA = styled.a`
     }
 `;
 
-export default function Link({ link, name }) {
+const Link = ({ link, name }) => {
     return (
         <StyledA
             href={link}
@@ -21,4 +21,6 @@ export default function Link({ link, name }) {
             {name}
         </StyledA>
     );
-}
+};
+
+export default Link;

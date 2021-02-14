@@ -1,10 +1,26 @@
 import { createGlobalStyle } from "styled-components";
 
+export const lightTheme = {
+    background: "#f0f0f0",
+    textColor: "#0f0f0f",
+    heartToggle: "../assets/theme-switcher/dark-theme-heart.gif",
+    whoDis: "../assets/new-website/light-theme.gif",
+};
+
+export const darkTheme = {
+    background: "#0f0f0f",
+    textColor: "#f0f0f0",
+    heartToggle: "../assets/theme-switcher/light-theme-heart.gif",
+    whoDis: "../assets/new-website/dark-theme.gif",
+};
+
 const GlobalStyle = createGlobalStyle`
     * {
       --black: #0F0F0F;
       --white: #F0F0F0;
       --pink: #E838FF;
+      --transparentPink: #f0f8;
+      --transparentPurple: #00f8;
       --purple: #6F38FF;
     }
 
@@ -16,16 +32,17 @@ const GlobalStyle = createGlobalStyle`
 
     body {
         display: flex;
-	      flex-direction: column;
+	    flex-direction: column;
   	    align-items: center;
   	    justify-content: center;
         height: 100vh;
+        max-width: 100vw;
 
   	    text-align: center;
   	    font-family: monospace;
-  	    background: ${props => props.theme.colors.background};
-  	    color: ${props => props.theme.colors.textColor};
-	      max-width: 100vw;
+  	    background: ${({ theme }) => theme.background};
+        color: ${({ theme }) => theme.textColor};
+        transition: all 0.25s linear;
     }
 
     h1 {
@@ -38,14 +55,14 @@ const GlobalStyle = createGlobalStyle`
     }
 
     ::selection {
-      background-color: var(--pink);
-      color: var(--white);
+      background-color: var(--transparentPink);
+      color: ${({ theme }) => theme.textColor};
       border-bottom: 2px solid var(--white);
     }
 
     ::-moz-selection {
-      background-color: var(--pink);
-      color: var(--white);
+      background-color: var(--transparentPink);
+      color: ${({ theme }) => theme.textColor};
       border-bottom: 2px solid var(--white);
     }
 

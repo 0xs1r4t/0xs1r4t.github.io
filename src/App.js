@@ -4,45 +4,34 @@
 import React, { useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
 
-import Link from "./components/Link";
-import GlobalStyle from "./components/GlobalStyle";
-import darkTheme from "./theme/darkTheme";
-import lightTheme from "./theme/lightTheme";
+import GlobalStyle, { lightTheme, darkTheme } from "./theme/themeConfig";
+import Content from "./components/Content";
+import { LightHeartToggle, DarkHeartToggle } from "./components/HeartToggle";
+// import { LightGifToggle, DarkGifToggle } from "./components/GifToggle";
+import GifToggle from "./assets/new-website/who-dis.gif";
 
 // Button
-
 const Button = styled.div`
-    font-size: 2em;
-    color: #afb;
     border: 1px solid rgba(0, 0, 0, 0);
 `;
 
+// App
 const App = () => {
-    const stored = localStorage.getItem("isDarkMode");
-    const [isDarkMode, setIsDarkMode] = useState(
-        stored === "true" ? true : false,
-    );
+    const [theme, setTheme] = useState("dark");
+
+    const toggleTheme = () => {
+        theme === "dark" ? setTheme("light") : setTheme("dark");
+    };
 
     return (
-        <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
+        <ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}>
             <GlobalStyle />
-            <Button
-                onClick={() => {
-                    setIsDarkMode(!isDarkMode);
-                    localStorage.setItem("isDarkMode", !isDarkMode);
-                }}>
-                Toggle Dark Mode
+            <Button onClick={toggleTheme}>
+                {theme === "dark" ? <LightHeartToggle /> : <DarkHeartToggle />}
             </Button>
-            <img src={darkTheme.whoDis} alt="new website who dis 👀" />
-            <h1>
-                find me on <Link link="https://sirat.xyz/" name="sirat.xyz" />{" "}
-                which is coming real soon! or you can just find me on{" "}
-                <Link link="https://github.com/sBx99/" name="github" /> or{" "}
-                <Link
-                    link="https://linkedin.com/in/siratbaweja/"
-                    name="linkedin"
-                />
-            </h1>
+            {/* theme === "dark" ? <DarkGifToggle /> : <LightGifToggle /> */}
+            <img src={GifToggle} alt="new website who dis" />
+            <Content />
         </ThemeProvider>
     );
 };
