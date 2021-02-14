@@ -9,15 +9,20 @@ const StyledA = styled.a`
         background: rgba(111, 56, 255, 0.5);
         border-bottom: 0px;
     }
+
+    :active {
+        background: var(--transparentPink);
+        transform: scale(1.075);
+    }
 `;
 
 const Link = ({ link, name }) => {
     return (
         <StyledA
             href={link}
-            className="highlight"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+            alt={name}>
             {name}
         </StyledA>
     );

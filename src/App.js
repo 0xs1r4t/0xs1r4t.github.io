@@ -6,13 +6,19 @@ import styled, { ThemeProvider } from "styled-components";
 
 import GlobalStyle, { lightTheme, darkTheme } from "./theme/themeConfig";
 import Content from "./components/Content";
-import { LightHeartToggle, DarkHeartToggle } from "./components/HeartToggle";
-// import { LightGifToggle, DarkGifToggle } from "./components/GifToggle";
-import GifToggle from "./assets/new-website/who-dis.gif";
+import { GifToggle, LightHeartToggle, DarkHeartToggle } from "./components/Images";
 
 // Button
 const Button = styled.div`
     border: 1px solid rgba(0, 0, 0, 0);
+`;
+
+// fixed toggle
+const FixToggle = styled.div`
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    z-index: 10;
 `;
 
 // App
@@ -26,11 +32,12 @@ const App = () => {
     return (
         <ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}>
             <GlobalStyle />
-            <Button onClick={toggleTheme}>
-                {theme === "dark" ? <LightHeartToggle /> : <DarkHeartToggle />}
-            </Button>
-            {/* theme === "dark" ? <DarkGifToggle /> : <LightGifToggle /> */}
-            <img src={GifToggle} alt="new website who dis" />
+            <FixToggle>
+                <Button onClick={toggleTheme}>
+                    {theme === "dark" ? <LightHeartToggle /> : <DarkHeartToggle />}
+                </Button>
+            </FixToggle>
+            <GifToggle />
             <Content />
         </ThemeProvider>
     );

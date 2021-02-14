@@ -1,5 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 
+// fonts
+import avaraTtf from "../assets/fonts/avara.ttf";
+import avaraWoff from "../assets/fonts/avara.woff";
+import avaraWoff2 from "../assets/fonts/avara.woff2";
+
 export const lightTheme = {
     background: "#f0f0f0",
     textColor: "#0f0f0f",
@@ -15,6 +20,15 @@ export const darkTheme = {
 };
 
 const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: "Avara";
+    src: url(${avaraWoff2}) format("woff2"),
+        url(${avaraWoff}) format("woff"),
+        url(${avaraTtf}) format("ttf");
+    font-weight: normal;
+    display: swap;
+  }
+
     * {
       --black: #0F0F0F;
       --white: #F0F0F0;
@@ -32,26 +46,17 @@ const GlobalStyle = createGlobalStyle`
 
     body {
         display: flex;
-	    flex-direction: column;
+	      flex-direction: column;
   	    align-items: center;
   	    justify-content: center;
         height: 100vh;
         max-width: 100vw;
 
   	    text-align: center;
-  	    font-family: monospace;
+        font-family: "Avara", serif;
   	    background: ${({ theme }) => theme.background};
         color: ${({ theme }) => theme.textColor};
         transition: all 0.25s linear;
-    }
-
-    h1 {
-      font-family: Cardo, serif;
-      color: var(--purple);
-      font-weight: 600;
-      font-size: 1.5em;
-      letter-spacing: 0.05em;
-      max-width: 550px;
     }
 
     ::selection {
@@ -69,10 +74,6 @@ const GlobalStyle = createGlobalStyle`
     @media screen and (max-width: 600px) {
         img {
           width: 95vw;
-        }
-
-        h1 {
-          font-width: 85vw;
         }
     }
 `;
