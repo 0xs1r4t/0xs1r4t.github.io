@@ -6,7 +6,8 @@ import styled, { ThemeProvider } from "styled-components";
 
 import GlobalStyle, { lightTheme, darkTheme } from "./theme/themeConfig";
 import Content from "./components/Content";
-import { GifToggle, LightHeartToggle, DarkHeartToggle } from "./components/Images";
+import Credits from "./components/Credits";
+import { WebGif, LightHeartToggle, DarkHeartToggle } from "./components/Images";
 
 // Button
 const Button = styled.div`
@@ -37,8 +38,9 @@ const App = () => {
                     {theme === "dark" ? <LightHeartToggle /> : <DarkHeartToggle />}
                 </Button>
             </FixToggle>
-            <GifToggle />
+            <WebGif />
             <Content />
+            <Credits />
         </ThemeProvider>
     );
 };

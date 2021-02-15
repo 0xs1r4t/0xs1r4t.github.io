@@ -5,17 +5,29 @@ import avaraWoff from "../assets/fonts/avara.woff";
 import avaraWoff2 from "../assets/fonts/avara.woff2";
 
 export const lightTheme = {
-    background: "#f0f0f0",
-    textColor: "#0f0f0f",
+    background: "var(--white)",
+    color: "var(--black)",
     heartToggle: "../assets/theme-switcher/dark-theme-heart.gif",
     whoDis: "../assets/new-website/light-theme.gif",
+    link: {
+        color: "var(--pink)",
+        underline: "var(--purple)",
+        background: "var(--transparentPurple)",
+        shadow: "var(--purple)",
+    },
 };
 
 export const darkTheme = {
-    background: "#0f0f0f",
-    textColor: "#f0f0f0",
+    background: "var(--black)",
+    color: "var(--white)",
     heartToggle: "../assets/theme-switcher/light-theme-heart.gif",
     whoDis: "../assets/new-website/dark-theme.gif",
+    link: {
+        color: "var(--purple)",
+        underline: "var(--pink)",
+        background: "var(--transparentPink)",
+        shadow: "var(--pink)",
+    },
 };
 
 const GlobalStyle = createGlobalStyle`
@@ -23,6 +35,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: "Avara";
     src: url(${avaraWoff2}) format("woff2"),
         url(${avaraWoff}) format("woff");
+    font-style: normal;
     font-weight: normal;
     display: swap;
   }
@@ -31,9 +44,9 @@ const GlobalStyle = createGlobalStyle`
       --black: #0F0F0F;
       --white: #F0F0F0;
       --pink: #E838FF;
-      --transparentPink: #f0f8;
-      --transparentPurple: #00f8;
       --purple: #6F38FF;
+      --transparentPink: #E838FF55;
+      --transparentPurple: #6F38FF55;
     }
 
     html {
@@ -53,19 +66,19 @@ const GlobalStyle = createGlobalStyle`
   	    text-align: center;
         font-family: "Avara", serif;
   	    background: ${({ theme }) => theme.background};
-        color: ${({ theme }) => theme.textColor};
+        color: ${({ theme }) => theme.color};
         transition: all 0.25s linear;
     }
 
     ::selection {
       background-color: var(--transparentPink);
-      color: ${({ theme }) => theme.textColor};
+      color: ${({ theme }) => theme.color};
       border-bottom: 2px solid var(--white);
     }
 
     ::-moz-selection {
       background-color: var(--transparentPink);
-      color: ${({ theme }) => theme.textColor};
+      color: ${({ theme }) => theme.color};
       border-bottom: 2px solid var(--white);
     }
 

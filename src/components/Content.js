@@ -1,13 +1,13 @@
-import Link from "./Link";
+import Link from "./Links";
 import styled from "styled-components";
 // useSound -
 // import useSound from "use-sound";
 // import boopSfx from "../../sounds/boop.mp3";
 
 const Wrapper = styled.div`
-    padding: 1em;
+    padding: 1em 1em 2em 1em;
     word-break: break-word;
-    color: var(--purple);
+    color: ${({ theme }) => theme.color});
     font-size: 2em;
     letter-spacing: 0.05em;
     max-width: 500px;

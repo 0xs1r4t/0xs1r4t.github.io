@@ -6,17 +6,22 @@ import styled from "styled-components";
 
 // image styling
 const StyledImg = styled.img`
-    filter: drop-shadow(0 0 15px var(--purple));
+    filter: drop-shadow(0 0 15px ${({ theme }) => theme.link.shadow});
 `;
 
-export const GifToggle = () => {
+export const WebGif = () => {
     return <StyledImg src={whoDis} alt="new website who dis" />;
 };
 
 // image styling
 const StyledToggle = styled.img`
-    filter: drop-shadow(0 0 0.75em var(--purple));
-    width: 8em;
+    filter: drop-shadow(0 0 0.75vw ${({ theme }) => theme.link.shadow});
+    width: 12.5vw;
+
+    @media (max-width: 768px) {
+        filter: drop-shadow(0 0 1.25vw ${({ theme }) => theme.link.shadow});
+        width: 15vw;
+    }
 `;
 
 export const LightHeartToggle = () => {
