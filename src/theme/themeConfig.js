@@ -9,10 +9,11 @@ export const lightTheme = {
     color: "var(--black)",
     heartToggle: "../assets/theme-switcher/dark-theme-heart.gif",
     whoDis: "../assets/new-website/light-theme.gif",
+    selection: "var(--transparentPink)",
     link: {
-        color: "var(--pink)",
-        underline: "var(--purple)",
-        background: "var(--transparentPurple)",
+        color: "var(--purple)",
+        underline: "var(--pink)",
+        background: "var(--transparentPink)",
         shadow: "var(--purple)",
     },
 };
@@ -22,10 +23,11 @@ export const darkTheme = {
     color: "var(--white)",
     heartToggle: "../assets/theme-switcher/light-theme-heart.gif",
     whoDis: "../assets/new-website/dark-theme.gif",
+    selection: "var(--transparentPurple)",
     link: {
-        color: "var(--purple)",
-        underline: "var(--pink)",
-        background: "var(--transparentPink)",
+        color: "var(--pink)",
+        underline: "var(--purple)",
+        background: "var(--transparentPurple)",
         shadow: "var(--pink)",
     },
 };
@@ -45,8 +47,8 @@ const GlobalStyle = createGlobalStyle`
       --white: #F0F0F0;
       --pink: #E838FF;
       --purple: #6F38FF;
-      --transparentPink: #E838FF55;
-      --transparentPurple: #6F38FF55;
+      --transparentPink: #E838FF90;
+      --transparentPurple: #6F38FF85;
     }
 
     html {
@@ -70,16 +72,18 @@ const GlobalStyle = createGlobalStyle`
         transition: all 0.25s linear;
     }
 
+    a {
+      text-decoration: none;
+    }
+
     ::selection {
-      background-color: var(--transparentPink);
+      background-color: ${({ theme }) => theme.selection};
       color: ${({ theme }) => theme.color};
-      border-bottom: 2px solid var(--white);
     }
 
     ::-moz-selection {
-      background-color: var(--transparentPink);
+      background-color: ${({ theme }) => theme.selection};
       color: ${({ theme }) => theme.color};
-      border-bottom: 2px solid var(--white);
     }
 
     @media screen and (max-width: 600px) {

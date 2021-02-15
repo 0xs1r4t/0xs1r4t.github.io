@@ -18,7 +18,6 @@ const StyledCredits = styled.div`
     max-width: 200px;
     word-break: break-word;
     letter-spacing: 0.05em;
-    transition: all 0.25s linear;
 
     :hover,
     :active {

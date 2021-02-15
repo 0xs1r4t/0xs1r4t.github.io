@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 const StyledA = styled.a`
     color: ${({ theme }) => theme.link.color};
-    text-decoration: none;
-    border-bottom: 2px solid ${({ theme }) => theme.link.underline};
-    transition: all 0.25s linear;
+
+    box-shadow: inset 0 -0.15em 0 ${({ theme }) => theme.link.underline};
+    transition: all 0.25s;
 
     :hover {
         color: ${({ theme }) => theme.color};
-        background: ${({ theme }) => theme.link.background};
+        box-shadow: inset 0 -1.35em 0 ${({ theme }) => theme.link.background};
         border-bottom: 0px;
     }
 `;
