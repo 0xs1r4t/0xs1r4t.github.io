@@ -1,6 +1,6 @@
 # sirat.me 🧜🏽‍♀️
 
-![👀 new website who dis 👀]("./src/assets/new-website/who-dis.gif")
+![👀 new website who dis 👀](./src/assets/new-website/who-dis.gif)
 
 hey there 👉🏼👈🏼 i really liked how my website turned out so i thought i'd _share it with the_ **🌏 _world_ 🌍** (or something like that). i just created this because this domain used to be free and i could easily have a more _professional looking_ website to host my projects from github pages on. i ended up buying this domain a few days ago (sometime in feb 2021) so i thought i'd do it up a bit.
 
