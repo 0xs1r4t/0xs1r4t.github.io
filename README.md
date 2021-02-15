@@ -1,13 +1,15 @@
-# sirat.me 🧜🏽‍♀️
+<h1 align="center"><samp>🧜🏽‍♀️ sirat.me 🧜🏽‍♀️</samp></h1>
 
-![👀 new website who dis 👀](./src/assets/new-website/who-dis.gif)
+<p align="center">
+<img src="./src/assets/new-website/who-dis.gif" width="250px" alt="👀 new website who dis 👀">
+</p>
 
 hey there 👉🏼👈🏼 i really liked how my website turned out so i thought i'd _share it with the_ **🌏 _world_ 🌍** (or something like that). i just created this because this domain used to be free and i could easily have a more _professional looking_ website to host my projects from github pages on. i ended up buying this domain a few days ago (sometime in feb 2021) so i thought i'd do it up a bit.
 
 ## 🔗 table of contents 🔗
 
--   [x] [🥞 stack](##stack)
--   [x] [💻 recreate this website](##recreate-this-website)
+-   [x] [🥞 stack](https://github.com/sBx99/sBx99.github.io#stack-)
+-   [x] [💻 recreate this website](https://github.com/sBx99/sBx99.github.io#recreate-this-website-)
 -   [x] [🖤 my website](https://www.sirat.me)
 
 ## stack 🥞
