@@ -6,11 +6,11 @@ import styled from "styled-components";
 
 // image styling
 const StyledImg = styled.img`
-    filter: drop-shadow(0 0 15px ${({ theme }) => theme.link.shadow});
+    filter: drop-shadow(0 0 10px ${({ theme }) => theme.link.shadow});
 `;
 
 export const WebGif = () => {
-    return <StyledImg src={whoDis} alt="new website who dis" />;
+    return <StyledImg src={whoDis} alt="new website who dis" width="500px" />;
 };
 
 // image styling

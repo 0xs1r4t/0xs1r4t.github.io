@@ -4,26 +4,22 @@ import styled from "styled-components";
 // import useSound from "use-sound";
 // import boopSfx from "../../sounds/boop.mp3";
 
-const Wrapper = styled.div`
-    padding: 1em 1em 2em 1em;
+const StyledWrapper = styled.div`
     word-break: break-word;
     color: ${({ theme }) => theme.color});
     font-size: 2em;
     letter-spacing: 0.05em;
     max-width: 500px;
-
-    @media (max-width: 768px) {
-        font-size: 1.5em;
-    }
+    padding: 1em 1em 0 1em;
 `;
 
 const Content = () => {
     return (
-        <Wrapper>
+        <StyledWrapper>
             find me on <Link link="https://sirat.xyz/" name="sirat.xyz" /> which is coming real
             soon! or you can just find me on <Link link="https://github.com/sBx99/" name="github" />{" "}
             or <Link link="https://linkedin.com/in/siratbaweja/" name="linkedin" />
-        </Wrapper>
+        </StyledWrapper>
     );
 };
 

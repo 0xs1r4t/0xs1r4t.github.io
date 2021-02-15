@@ -22,6 +22,17 @@ const FixToggle = styled.div`
     z-index: 10;
 `;
 
+// const styling
+const Styles = styled.main`
+    @media (max-width: 768px) {
+        font-size: 0.75em;
+    }
+
+    @media (max-width: 500px) {
+        font-size: 0.5em;
+    }
+`;
+
 // App
 const App = () => {
     const [theme, setTheme] = useState("dark");
@@ -38,8 +49,10 @@ const App = () => {
                     {theme === "dark" ? <LightHeartToggle /> : <DarkHeartToggle />}
                 </Button>
             </FixToggle>
-            <WebGif />
-            <Content />
+            <Styles>
+                <WebGif />
+                <Content />
+            </Styles>
             <Credits />
         </ThemeProvider>
     );
