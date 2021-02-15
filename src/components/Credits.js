@@ -11,8 +11,8 @@ const StyledCredits = styled.div`
     padding: 0.75em;
     z-index: 10;
 
-    font-size: 1em;
-    border: 2px solid ${({ theme }) => theme.color};
+    font-size: 0.75em;
+    border: 1px solid ${({ theme }) => theme.color};
     border-radius: 10px;
 
     max-width: 200px;
