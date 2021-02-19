@@ -24,7 +24,7 @@ const Link = ({ link, name }) => {
 const StyledCreds = styled.a`
     color: ${({ theme }) => theme.color};
     transition: all 0.25s linear;
-    text-decoration: none;
+    text-decoration: underline wavy;
 `;
 
 export const CreditLink = ({ link, name }) => {

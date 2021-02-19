@@ -10,8 +10,10 @@ import Credits from "./components/Credits";
 import { WebGif, LightHeartToggle, DarkHeartToggle } from "./components/Images";
 
 // Button
-const Button = styled.div`
-    border: 1px solid rgba(0, 0, 0, 0);
+const Button = styled.button`
+    border: 1px solid #0000;
+    color: #0000;
+    background: #0000;
 `;
 
 // fixed toggle
