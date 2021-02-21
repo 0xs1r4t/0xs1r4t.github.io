@@ -1,6 +1,6 @@
 {
-  "short_name": "sirat's 🔗🌴",
-  "name": "this is sirat baweja's custom link tree! discover their identity online by clicking here.",
+  "short_name": "Sirat Baweja",
+  "name": "This is Sirat Baweja's website! Discover their identity online by clicking here.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,6 +10,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#f0c9f4",
-  "background_color": "#8651d3"
+  "theme_color": "#6F38FF",
+  "background_color": ["#0f0f0f", "#f0f0f0"]
 }

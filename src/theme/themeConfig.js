@@ -86,6 +86,20 @@ const GlobalStyle = createGlobalStyle`
       color: ${({ theme }) => theme.color};
     }
 
+    button:hover,
+    button:focus {
+        background: #0000;
+    }
+
+    button:focus {
+        outline: 1px solid #00000001;
+        outline-offset: -4px;
+    }
+
+    button:active {
+        transform: scale(0.9);
+    }
+
     @media screen and (max-width: 600px) {
         img {
           width: 95vw;
