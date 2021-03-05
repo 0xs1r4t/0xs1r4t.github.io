@@ -8,6 +8,7 @@ import GlobalStyle, { lightTheme, darkTheme } from "./theme/themeConfig";
 import Content from "./components/Content";
 import Credits from "./components/Credits";
 import { WebGif, LightHeartToggle, DarkHeartToggle } from "./components/Images";
+import { NoiseBg } from "./components/Noise";
 
 // Button
 const Button = styled.button`
@@ -46,6 +47,7 @@ const App = () => {
     return (
         <ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}>
             <GlobalStyle />
+            <NoiseBg />
             <FixToggle>
                 <Button onClick={toggleTheme}>
                     {theme === "dark" ? <LightHeartToggle /> : <DarkHeartToggle />}
