@@ -49,7 +49,7 @@ export const NoiseBg = styled.div`
     animation: ${noiseAnim} 0.2s infinite;
     background-blend-mode: difference;
     filter: invert(1);
-    opacity: 0.5;
+    opacity: 0.25;
     visibility: visible;
     z-index: -1;
     transition: background 0.25s linear;
