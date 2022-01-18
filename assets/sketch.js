@@ -8,10 +8,27 @@ var value = 300,
    count = 0;
 var deg = []; // degrees
 
+let dragging = false;
+let offsetX, offsetY, onsetX, onsetY;
+let currentDragDiv;
+
 function setup() {
    cnv = createCanvas(windowWidth, windowHeight);
-   cnv.id("mycanvas");
+   cnv.position(0, 0);
+   cnv.style("z-index", "-1");
+
+   console.log(
+      "🌸 hey there! ✨( ・_・)ノ✨🌸",
+      "\n🌼🌻🌷🌻🌼🌷🌼🌻🌷🌻🌼🌷",
+      "\nto find out more about me,",
+      "\nvisit my website ➡️ sirat.xyz",
+      "\nor my github ➡️ @0xS1R4T 🦄🦄",
+   );
+
    addDegrees(); // add degrees 0 - 360 in deg
+
+   console.log("random colors (hue and brightness values)");
+   console.log("click your mouse to see these values! 🌈");
    cnv.mouseClicked(chooseRandColor);
    colorMode(HSB, 360, 100, 100);
    points = new p5.Vector([num]);
@@ -29,7 +46,7 @@ function addDegrees() {
    for (i = 0; i <= 360; i += 30) {
       deg.push(i);
    }
-   // console.log(deg);
+   console.log("array of degrees ⭕", `\n${deg}`);
 }
 
 function chooseRandColor() {
@@ -41,7 +58,7 @@ function chooseRandColor() {
       back = value - 180;
    }
 
-   // console.log(`value = ${value}, background = ${back}`);
+   console.log(`slingy hue = ${value}, background hue = ${back}`);
 }
 
 function draw() {
@@ -63,11 +80,3 @@ function draw() {
       leader = point;
    }
 }
-
-console.log(
-   "🌸 hey there! ✨( ・_・)ノ✨🌸",
-   "\n🌼🌻🌷🌻🌼🌷🌼🌻🌷🌻🌼🌷",
-   "\nto find out more about me,",
-   "\nvisit my website ➡️ sirat.xyz",
-   "\nor my github ➡️ @0xS1R4T 🦄🦄",
-);

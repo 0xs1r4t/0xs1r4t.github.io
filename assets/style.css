@@ -1,7 +1,39 @@
 html,
-body,
-canvas {
-   margin: 0;
-   padding: 0;
-   overflow: hidden;
+body {
+   font-family: monospace;
+   font-size: 20px;
+
+   color: #fff;
+}
+
+body {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+
+.info {
+   text-align: center;
+   background: #000;
+
+   border-radius: 20px;
+   width: 300px;
+
+   margin: 20px;
+   padding: 20px;
+}
+
+.me {
+   color: #faf;
+   font-style: italic;
+   font-weight: bold;
+}
+
+.plants {
+   padding: 10px 0;
+}
+
+a {
+   color: #ffa;
 }
