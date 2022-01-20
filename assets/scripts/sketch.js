@@ -2,7 +2,6 @@ var x, y, points, target, leader, angle, i, distance, velocity;
 var value = 300,
    back = 120,
    ease = 0.5,
-   easing = true,
    num = 80,
    frames = 700,
    count = 0;
@@ -12,8 +11,7 @@ function setup() {
    cnv = createCanvas(windowWidth, windowHeight);
    cnv.position(0, 0);
    cnv.style("z-index", "-1");
-
-   pg = createGraphics(windowWidth, windowHeight);
+   cnv.mousePressed(chooseRandColor);
 
    console.log(
       "🌸 hey there! ✨( ・_・)ノ✨🌸",
@@ -27,7 +25,7 @@ function setup() {
 
    console.log("random colors (hue and brightness values)");
    console.log("click your mouse to see these values! 🌈");
-   // cnv.mousePressed(chooseRandColor);
+
    colorMode(HSB, 360, 100, 100);
    points = new p5.Vector([num]);
 
@@ -56,26 +54,19 @@ function chooseRandColor() {
       back = value - 180;
    }
 
-   console.log(`slingy hue = ${value}, background hue = ${back}`);
+   console.log(`slingy hue = ${value}, outline hue = ${back}`);
 }
 
-function keyPressed() {
-   chooseRandColor();
-}
-
-// for handheld devices
-function deviceShaken() {
+function mousePressed() {
    chooseRandColor();
 }
 
 function draw() {
    clear();
-   // background(0);
-   // background(back, 25, 100);
-   // noStroke();
 
    stroke(back, 25, 100);
    strokeWeight(2);
+
    x = mouseX;
    y = mouseY;
 

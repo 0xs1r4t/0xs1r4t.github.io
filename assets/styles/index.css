@@ -1,0 +1,65 @@
+main {
+   text-align: center;
+   background: var(--primary);
+   color: var(--secondary);
+   border: 2px solid var(--secondary);
+   box-shadow: 5px 5px var(--pink), 10px 10px var(--yellow), 15px 15px var(--blue);
+
+   border-radius: 20px;
+   margin: 20px;
+   padding: 20px;
+   width: 75vw;
+   max-height: calc(100% - 20px);
+}
+
+.me {
+   color: var(--me);
+   font-style: italic;
+   font-weight: bold;
+}
+
+.plants {
+   padding: 10px 0;
+}
+
+button {
+   background: var(--pink);
+   color: #000;
+}
+
+button:hover,
+button:focus {
+   border: 2px solid var(--pink);
+   box-shadow: 0 0 5px var(--pink), 0 0 5px var(--pink);
+}
+
+/* media queries */
+
+@media (max-width: 768px) {
+   .info {
+      width: 80vw;
+      margin: 0;
+   }
+}
+
+@media (max-width: 450px) {
+   .info {
+      width: 80vw;
+      margin: 0;
+      box-shadow: none;
+   }
+}
+
+@media (prefers-color-scheme: dark) {
+   :root {
+      --primary: #000;
+      --secondary: #fff;
+
+      --link: #ffa;
+      --me: #faf;
+   }
+
+   video {
+      filter: hue-rotate(135deg) saturate(2) contrast(2) brightness(0.5);
+   }
+}

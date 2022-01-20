@@ -1,0 +1,27 @@
+main {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-start;
+   width: 90vw;
+   height: 90vh;
+   padding: 20px;
+}
+
+.msg {
+   background: var(--primary);
+   padding: 20px;
+}
+
+button {
+   background: var(--secondary);
+   color: var(--primary);
+   margin: 20px 0;
+}
+
+button:hover,
+button:focus,
+button:active {
+   border: 2px solid var(--pink);
+   box-shadow: 0 0 5px var(--pink);
+}
